@@ -6,7 +6,7 @@ import { UpdateNoteDto } from './dto/update-note.dto';
 
 @Controller('notes')
 export class NotesController {
-  constructor(private readonly notesService: NotesService) {}
+  constructor(private readonly notesService: NotesService) { }
 
   @Post()
   async create(@Body(new ValidationPipe()) createNoteDto: CreateNoteDto) {
@@ -26,5 +26,13 @@ export class NotesController {
   @Delete(':id')
   async delete(@Param('id') id: string) {
     return this.notesService.delete(id);
+  }
+
+  @Get('health')
+  healthCheck() {
+    return {
+      status: 'ok',
+      timestamp: new Date().toISOString(),
+    };
   }
 }
