@@ -3,9 +3,9 @@
 
 // start MongoDB (e.g., on Mac run "sudo mongod --dbpath=/Users/{YOUR_MAC_NAME}/data/db")
 
-git clone https://github.com/wanhuahu/nestjs-notes
+git clone https://github.com/wanhuahu/test-project
 
-cd nestjs-notes
+cd test-project
 
 npm install
 
